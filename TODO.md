@@ -1,0 +1,1 @@
+- Add navbar styles to src/styles.css to make it fixed at the top and styled appropriately
