@@ -1,43 +1,286 @@
-import React from 'react'
+import React from "react";
+
+import { FaGithub, FaLinkedin, FaDownload, FaArrowRight, FaInstagram, FaFacebookF, FaWhatsapp, FaFacebook }
+
+  from "react-icons/fa";
+
+import { motion } from "framer-motion";
+
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
+
   return (
-    <section className="hero">
-      <div>
-        <h1>Hi, I'm Prashant Dike</h1>
-        <span className="badge">Software Developer</span>
-        <p>Motivated Software Developer with a strong foundation in programming, problem-solving, and application development.</p>
-        <br />
-        <div className="social-links">
-          <a href="https://www.linkedin.com/in/prashant-dike-68396a39b" target="_blank" rel="noopener noreferrer" className="social-link">
-            <svg className="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://github.com/prashant05-09" target="_blank" rel="noopener noreferrer" className="social-link">
-            <svg className="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-            GitHub
-          </a>
-          <a href="https://www.facebook.com/prashant.dike.359" target="_blank" rel="noopener noreferrer" className="social-link">
-            <svg className="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-            Facebook
-          </a>
-          <a href="https://www.instagram.com/dkprashant05/" target="_blank" rel="noopener noreferrer" className="social-link">
-            <svg className="social-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            Instagram
-          </a>
+
+    <section className="min-vh-100 d-flex align-items-center position-relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg,#0f172a,#111827,#1e293b)",
+        color: "#fff",
+        paddingTop: "100px"
+      }}
+    >
+
+      <div
+        style={{
+          position: "absolute",
+          width: "350px",
+          height: "350px",
+          background: "#38bdf8",
+          filter: "blur(150px)",
+          opacity: "0.25",
+          top: "-100px",
+          left: "-100px",
+          borderRadius: "50%"
+        }}
+      ></div>
+
+      <div
+        style={{
+          position: "absolute",
+          width: "300px",
+          height: "300px",
+          background: "#0ea5e9",
+          filter: "blur(140px)",
+          opacity: "0.2",
+          bottom: "-100px",
+          right: "-100px",
+          borderRadius: "50%"
+        }}
+      ></div>
+
+      <div className="container position-relative">
+
+        <div className="row align-items-center">
+
+          <motion.div className="col-lg-6 text-center text-lg-start" initial={{ opacity: 0, x: -80 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
+            <div className="d-inline-block px-4 py-2 rounded-pill mb-5"
+              style={{
+                background: "rgba(56,189,248,0.15)",
+                border: "1px solid rgba(56,189,248,0.3)",
+                color: "#38bdf8",
+                fontWeight: "600"
+              }}
+            >
+              Welcome To My Portfolio
+            </div>
+
+            <h1 className="fw-bold" style={{ fontSize: "clamp(4rem,5vw,4rem)", lineHeight: "1.2" }}>Hi, I'm<span className="text-info">{" "}Prashant Dike</span></h1>
+
+            <div className="fw-bold text-info my-4" style={{ fontSize: "clamp(1.5rem,2vw,2.5rem)"}}>
+              <TypeAnimation sequence={["Frontend Developer", 2000, "React Developer", 2000, "Full Stack Developer", 2000, "UI/UX Designer", 2000,]} speed={50} repeat={Infinity} cursor={false} />
+            </div>
+
+            <p className="lead text-light-emphasis" style={{ maxWidth: "600px", lineHeight: "1.8" }}>
+              Passionate React.js Developer creating modern, responsive and user-friendly websites with attractive UI/UX designs and smooth web experiences.
+            </p>
+
+            <div className="d-flex gap-3 mt-5 flex-wrap justify-content-center justify-content-lg-start">
+              <a href="/projects">
+                <button className="btn btn-info btn-lg px-4 py-3 fw-semibold shadow">
+                  View Projects
+                  <FaArrowRight className="ms-1" />
+                </button>
+              </a>
+
+              <a href="/PRASHANT_RESUME.pdf" target="_blank" rel="noreferrer">
+                <button className="btn btn-outline-info btn-lg px-4 py-3 fw-semibold">
+                  Download CV
+                  <FaDownload className="ms-2" />
+                </button>
+              </a>
+
+            </div>
+            <div className="d-flex gap-3 flex-wrap mt-4">
+              <a href="https://github.com/prashant05-09" target="_blank" rel="noreferrer" className="text-decoration-none">
+
+                <div className="d-flex align-items-center justify-content-center rounded-circle"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    background: "#111827",
+                    color: "#ffffff",
+                    fontSize: "24px",
+                    border: "2px solid #ffffff",
+                    boxShadow: "0 0 20px rgba(255,255,255,0.4)",
+                    transition: "all 0.4s ease",
+                    cursor: "pointer",
+                    transform: "scale(1)"
+                  }}
+
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.15)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 35px rgba(255,255,255,0.9)";
+                  }}
+
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(255,255,255,0.4)";
+                  }}
+                >
+                  <FaGithub />
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/prashant-dike-68396a39b" target="_blank" rel="noreferrer" className="text-decoration-none">
+
+                <div className="d-flex align-items-center justify-content-center rounded-circle"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    background: "#111827",
+                    color: "#0A66C2",
+                    fontSize: "24px",
+                    border: "2px solid #0A66C2",
+                    boxShadow: "0 0 20px rgba(10,102,194,0.5)",
+                    transition: "all 0.4s ease",
+                    cursor: "pointer",
+                    transform: "scale(1)"
+                  }}
+
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.15)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 35px rgba(10,102,194,0.9)";
+                  }}
+
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(10,102,194,0.5)";
+                  }}
+                >
+                  <FaLinkedin />
+                </div>
+              </a>
+
+              <a href="https://wa.me/918767455741" target="_blank" rel="noreferrer" className="text-decoration-none">
+
+                <div className="d-flex align-items-center justify-content-center rounded-circle"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    background: "#111827",
+                    color: "#25D366",
+                    fontSize: "24px",
+                    border: "2px solid #25D366",
+                    boxShadow: "0 0 20px rgba(37,211,102,0.5)",
+                    transition: "all 0.4s ease",
+                    cursor: "pointer",
+                    transform: "scale(1)"
+                  }}
+
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.15)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 35px rgba(37,211,102,0.9)";
+                  }}
+
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(37,211,102,0.5)";
+                  }}
+                >
+                  <FaWhatsapp />
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/dkprashant05/" target="_blank" rel="noreferrer" className="text-decoration-none">
+
+                <div className="d-flex align-items-center justify-content-center rounded-circle"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    background: "#111827",
+                    color: "#E1306C",
+                    fontSize: "24px",
+                    border: "2px solid #E1306C",
+                    boxShadow: "0 0 20px rgba(225,48,108,0.5)",
+                    transition: "all 0.4s ease",
+                    cursor: "pointer",
+                    transform: "scale(1)"
+                  }}
+
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.15)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 35px rgba(225,48,108,0.9)";
+                  }}
+
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(225,48,108,0.5)";
+                  }}
+                >
+                  <FaInstagram />
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/prashant.dike.359/" target="_blank" rel="noreferrer" className="text-decoration-none">
+
+                <div className="d-flex align-items-center justify-content-center rounded-circle"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    background: "#111827",
+                    color: "#1877F2",
+                    fontSize: "24px",
+                    border: "2px solid #1877F2",
+                    boxShadow: "0 0 20px rgba(24,119,242,0.5)",
+                    transition: "all 0.4s ease",
+                    cursor: "pointer",
+                    transform: "scale(1)"
+                  }}
+
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.15)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 35px rgba(24,119,242,0.9)";
+                  }}
+
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.boxShadow =
+                      "0 0 20px rgba(24,119,242,0.5)";
+                  }}
+                >
+                  <FaFacebook />
+                </div>
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div className="col-lg-6 text-center mt-5 mt-lg-0" initial={{ opacity: 0, x: 80 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
+            <div className="position-relative d-inline-block">
+
+              <div
+                style={{
+                  position: "absolute",
+                  inset: "-20px",
+                  background: "linear-gradient(135deg,#38bdf8,#0ea5e9)",
+                  filter: "blur(60px)",
+                  opacity: "0.4",
+                  borderRadius: "50%"
+                }}
+              ></div>
+
+              <img src="/profile.jpg" alt="profile" className="img-fluid rounded-circle border border-5 border-info shadow-lg position-relative"
+                style={{
+                  width: "480px",
+                  height: "480px",
+                  objectFit: "cover",
+                  maxWidth: "100%"
+                }}
+              />
+            </div>
+          </motion.div>
         </div>
-        <br /><br />
-<a href="/Prashant_Dike_Resume.pdf" target="_blank" rel="noopener noreferrer"><button>View CV</button></a>
       </div>
-      <img src="/profile.jpg" alt="profile" />
     </section>
-  )
+  );
 }
